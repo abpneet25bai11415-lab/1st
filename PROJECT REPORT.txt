@@ -1,0 +1,58 @@
+📘 Library System – Python Report
+
+Intro:
+This task is a small Library System made in Python. It uses a book list & small code bits. The main goal is to save book info & let you do things like add, change, drop, or get books in the library. It runs on a menu you see on the screen. The menu is easy to use.
+
+——
+
+Program Bits
+
+1. Add New Book
+Lets you type in book info by hand. You give:
+• Book ID
+• Book name
+• Writer
+• Copies you have
+
+2. Add Book with Set Info
+Uses setdefault() to put in base info when none is set.
+
+3. Check Book In Stock
+Checks if a book ID is in the library list.
+
+4. Show All Books
+Shows all books, with ID, name, writer, & copies you can get.
+
+5. Get Writer of Book
+Finds & shows writer name by book ID.
+
+6. Change Stock (Give/Take Back)
+Lets you take a book (copies -1) or bring it back (copies +1).
+
+7. Drop a Book
+Takes a book out of the list by book ID.
+
+8. Clean All Books
+Drops all book info from the library list.
+
+9. Quit Program
+Stops the menu & ends the program.
+
+——
+
+Code Parts
+
+✔ Python book list to save book info
+✔ Small code bits for each job
+✔ Menu that runs with while True
+✔ If checks for what to do next
+✔ Handles what you type in
+
+——
+
+Good Points
+
+• Simple to use & runs library info well
+• Good to learn Python for new folks
+• Shows real use of book lists
+• Helps you know how to save & change info
