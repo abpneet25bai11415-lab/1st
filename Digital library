@@ -1,0 +1,211 @@
+# library to store all books
+
+library = {}
+
+# 1. Add a new book
+
+def add_book():
+
+    book_id = (input("Enter book id:"))
+
+    title = input("What is the Book Name: ")
+
+    author=input("Author: ")
+
+    copies = int(input("Input Available Copies: "))
+
+    library[book_id] = {
+
+    "title": title,
+
+    "author": author,
+
+    "copies": copies
+
+    }
+
+    print("Book Added Successfully! \n")
+
+# 2. Add book with setdefault()
+
+def add_book_with_defaults():
+
+    book_id = input("Enter Book ID:")
+
+    library. setdefault(book_id, {})
+
+    library[book_id]. setdefault("title", "No Title")
+
+    library[book_id]. setdefault("author", "No Author")
+
+    library[book_id]. setdefault("copies", 0)
+
+    print("Book Added (with default values)! \n")
+
+# 3. Check Book Availability
+
+def check_availability():
+
+    book_id=input("Enter Book ID : ")
+
+    if book_id in library:
+
+        if book_id > 0:
+
+            print("Book is Available. \n")
+
+        else:
+
+          print("Book is NOT Available. \n")
+
+    else:
+
+      print("Book ID Not Found! \n")
+
+# 4. List All Books
+
+def list_all_books():
+
+    if len(library) == 0:
+
+      print("Library is Empty! \n")   
+
+    else:
+
+        for book_id, details in library. items():
+
+            print("Book ID:", book_id)
+
+            print("Title:", details["title"])
+
+            print("Author:", details["author"])
+
+            print("Available Copies:", details["copies"])
+
+            print("----------------------------")
+
+        print()
+
+# 5. Retrieve Author Name
+
+def get_author():
+
+    book_id = input("Please enter book ID: ")
+
+    if book_id in library:
+
+      print("Author:", book_id, "\n")
+
+    else:
+
+      print("Book Not Found! \n")
+
+# 6. Update Copies (issue or return)
+
+def update_copies():
+
+    book_id = input("Book ID: ")
+
+    if book_id in library:
+
+        change = int(input("Type +1 for return, -1 for issue: "))
+
+        librarybook_id += change
+
+        print("Updated Copies:", librarybook_id, "\n")
+
+    else:
+
+     print("Book Not Found! \n")
+
+# 7. Remove a Book
+
+def remove_book():
+
+    book_id = input("Enter Book Id: ")
+
+    if book_id in library:
+
+      library.pop(book_id)
+
+      print("Book Removed Successfully! \n")
+
+    else:
+
+      print("Book ID Not Found! \n")
+
+# 8. Clear Entire Library
+
+def clear_library():
+
+    library.clear()
+
+    print("Library Cleared! \n")
+
+# Simple Menu-Driven Program
+
+while True:
+
+    print("===== Library Menu =====")
+
+    print("1. Add New Book")
+
+    print("2. Add Book with Default Values")
+
+    print("3. Check Book Availability")
+
+    print("4. List All Books")
+
+    print("5. Get Author of a Book")
+
+    print("6. Update Copies (Issue/Return)")
+
+    print("7. Remove a Book")
+
+    print("8. Clear Library")
+
+    print("9. Exit")
+
+    choice = int(input("Select your choice: "))
+
+    if choice == 1:
+
+      add_book()
+
+    elif choice == 2:
+
+     add_book_with_defaults()
+
+    elif choice == 3:
+
+     check_availability()
+
+    elif choice == 4:
+
+     list_all_books()
+
+    elif choice == 5:
+
+     get_author()
+
+    elif choice == 6:
+
+     update_copies()
+
+    elif choice == 7:
+
+     remove_book()
+
+    elif choice == 8:
+
+     clear_library()
+
+    elif choice == 9:
+
+      print("Exiting Program...")
+
+      break
+
+    else:
+
+      print("Invalid Choice! Try again. \n")
